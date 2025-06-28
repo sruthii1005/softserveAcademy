@@ -173,41 +173,6 @@ This creates `a container with the Django application` and another `container wi
     sudo docker stack deploy -c docker-compose-swarm.yml softserve
     ```
 
-6. **Extra:**  
-    You can check the status of the deployment with:  
-    ```bash
-    sudo docker node ls
-    sudo docker service ls
-    sudo docker service ps softserve_web
-    sudo docker service ps softserve_db
-    sudo docker container ls
-    ```  
-    Check the logs with:  
-    ```bash
-    sudo docker service logs softserve_web
-    sudo docker service logs softserve_db
-    ```
-    And shut down the stack with:  
-    ```bash
-    sudo docker stack rm softserve
-    ```
-    And leave the swarm with:  
-    ```bash
-    sudo docker swarm leave --force
-    ```
 
-You can access the application opening your web browser and going to `http://<manager-ip>/`, this runs on the port 80 by default.
-
-This will create a service with `5 replicas of the Django container`, and a service with `1 replica of the database container (MySQL)`.
-
-## Contributors
-
-| Name                      | Email                   | Role                   |
-|---------------------------|-------------------------|------------------------|
-| Esteban Vergara Giraldo   | evergarag@eafit.edu.co  | Developer, Architect   |
-| Miguel Ángel Cock Cano    | macockc@eafit.edu.co    | Tester                 |
-| Jonathan Betancur Espinosa| jbetancur3@eafit.edu.co | Developer              |
-| Moises David Arrieta Hernandez | mdarrietah@eafit.edu.co | Analyst           |
-| Pablo Baez Santamaria     | pbaezs@eafit.edu.co     | UX/UI, Scrum Master    |
 
 
